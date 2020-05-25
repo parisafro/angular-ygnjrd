@@ -1,0 +1,107 @@
+----list----
+
+  <ul *ngFor="let c of Cource; index as x" >
+    {{ x }} ) {{c.name}}
+  </ul>
+  <hr>
+
+  ----first----
+  <table class="table" border="$1" align="center">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of Cource;let aval=first"
+      [ngClass]="{yellow:aval}">
+        <td>{{c.name}}</td>
+        <td>{{c.id }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  ----even----
+  <table border="$1" align="center">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of Cource;let sabz=odd; let Iseven=even"
+      [ngClass]="{first:Iseven,green:sabz}">
+        <td>
+          {{s.name}}
+        </td>
+          <td>{{s.id}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  ---last---
+  <table border="$1" align="center">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of Cource;last as akhar"
+      [ngClass]="{yellow:akhar}">
+        <td>{{a.name}}</td>
+        <td>{{a.id}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  ---count---
+  <table border="$1" align="center">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of Cource; count as shomaresh">
+        <td>{{x.name}}</td>
+        <td>{{x.id}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  --click--
+  <button (click)="showData()"> show cources </button>
+  <ul *ngFor="let x of Cource">
+    <li>
+      {{x.name}}
+    </li>
+  </ul>
+  <hr>
+  ---display---
+  <ul>
+    <li *ngFor="let c of Cource">
+      {{c.name}}
+      <button (click)="OnRemove(c)">remove</button>
+    </li>
+  </ul>
+  <hr>
+  ---delete---
+  <ul>
+    <li *ngFor="let p of Cource">
+      {{p.name}}
+      <button (click)="OnDelete(p)">delete</button>
+    </li>
+  </ul>
+
+
+
+  
+  
+
+
