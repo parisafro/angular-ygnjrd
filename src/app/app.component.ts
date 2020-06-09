@@ -11,7 +11,8 @@ Cource=[
   {name:'physic', id:'1',avg:'20'},
   {name:'science', id:'2',avg:'10'},
   {name:'chemestry', id:'3',avg:'7'},
-  {name:'english', id:'4',avg:'12'}
+  {name:'english', id:'4',avg:'12'},
+  {name:'english', id:'4',avg:'15'}
 ]
 OnRemove(Cource){
 Cource.name='parisa';
